@@ -24,6 +24,10 @@ namespace Kea.WebApi
                 new { id = RouteParameter.Optional });
 
             config.DependencyResolver = GetContainer();
+            //Por alguna razon, el serialize settings que trae el WebApi no serializa bien los proxys dinamicos
+            //asi que se le establece el que trae Newtonsoft por default
+            config.Formatters.JsonFormatter.SerializerSettings = new Newtonsoft.Json.JsonSerializerSettings();
+
 
             server = new HttpSelfHostServer(config);
         }
