@@ -16,6 +16,10 @@ namespace Kea.WebApi
     {
         public HttpSelfHostServer server { get; private set; }
 
+        /// <summary>
+        /// Create a new web api server. Start the server with the OpenAsync method
+        /// </summary>
+        /// <param name="address"></param>
         public Server(string address)
         {
             var config = new HttpSelfHostConfiguration(address);
@@ -33,7 +37,25 @@ namespace Kea.WebApi
         }
 
         /// <summary>
-        /// Obtiene el IoC
+        /// Open the current server instance
+        /// </summary>
+        /// <returns></returns>
+        public Task OpenAsync()
+        {
+            return server.OpenAsync();
+        }
+
+        /// <summary>
+        /// Close the current server instance
+        /// </summary>
+        /// <returns></returns>
+        public Task CloseAsync()
+        {
+            return server.CloseAsync();
+        }
+
+        /// <summary>
+        /// Gets the IoC
         /// </summary>
         /// <returns></returns>
         public static IDependencyResolver GetContainer()

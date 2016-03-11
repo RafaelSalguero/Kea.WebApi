@@ -9,4 +9,4 @@ Self hosting web api skeleton
 `git remote rm origin`
 
 - Run the app with **administrator privileges**
-- Enter to `localhost:8080/api/product/`
+- Enter to `localhost:82/api/product/`

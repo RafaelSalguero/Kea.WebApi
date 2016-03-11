@@ -65,17 +65,12 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="Tonic.Console, Version=1.0.5899.17682, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Tonic.Console.1.0.5899.17682\lib\net45\Tonic.Console.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Tonic.RLinq, Version=1.0.5899.17681, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Tonic.RLinq.1.0.5899.17681\lib\net45\Tonic.RLinq.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleBoot.cs" />
     <Compile Include="Controllers\Products\Product.cs" />
     <Compile Include="Controllers\Products\ProductController.cs" />
     <Compile Include="Program.cs" />
